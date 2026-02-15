@@ -31,4 +31,76 @@
  */
 export function calculateTip(billAmount, serviceRating) {
   // Your code here
+var tipPercentage;
+var  tipAmount;
+var totalAmount;
+
+if(billAmount>0 && (serviceRating>=1 && serviceRating<=5) && (Number.isInteger(serviceRating)))
+{
+   if(serviceRating==1)
+    {
+      tipPercentage=5;
+      tipAmount=Math.round((tipPercentage * billAmount / 100) * 100) / 100;
+      totalAmount=billAmount+tipAmount ;
+      return { tipPercentage: tipPercentage, tipAmount: tipAmount, totalAmount: totalAmount};
+    }
+    else if(serviceRating==2)
+    {
+       tipPercentage=10;
+      tipAmount=Math.round((tipPercentage * billAmount / 100) * 100) / 100;
+      totalAmount=billAmount+tipAmount ;
+        return { tipPercentage: tipPercentage, tipAmount: tipAmount, totalAmount: totalAmount};
+    }
+    else if(serviceRating==3)
+    {
+       tipPercentage=15;
+      tipAmount=Math.round((tipPercentage * billAmount / 100) * 100) / 100;
+      totalAmount=billAmount+tipAmount ;
+        return { tipPercentage: tipPercentage, tipAmount: tipAmount, totalAmount: totalAmount};
+    }
+    else if(serviceRating==4)
+    {
+       tipPercentage=20;
+      tipAmount=Math.round((tipPercentage * billAmount / 100) * 100) / 100;
+      totalAmount=billAmount+tipAmount ;
+        return { tipPercentage: tipPercentage, tipAmount: tipAmount, totalAmount: totalAmount};
+    }else if(serviceRating==5)
+    {
+       tipPercentage=25;
+      tipAmount=Math.round((tipPercentage * billAmount / 100) * 100) / 100;
+      totalAmount=billAmount+tipAmount ;
+        return { tipPercentage: tipPercentage, tipAmount: tipAmount, totalAmount: totalAmount};
+    }
+}else{
+  return null;
+}
+
+
+
+
+ /* if(billAmount<=0 && !(serviceRating>=1 && serviceRating<=5) && !(Number.isInteger(serviceRating)))
+  {
+    return {tipPercentage: null, tipAmount: null, totalAmount: null};
+  }
+   else{
+    if(serviceRating==1)
+    {
+      return { tipPercentage: 5, tipAmount: (tipPercentage*billAmount)/100, totalAmount: billAmount+tipAmount };
+    }
+    else if(serviceRating==2)
+    {
+      return { tipPercentage: 10, tipAmount: (tipPercentage*billAmount)/100, totalAmount: billAmount+tipAmount };
+    }
+    else if(serviceRating==3)
+    {
+      return { tipPercentage: 15, tipAmount: (tipPercentage*billAmount)/100, totalAmount: billAmount+tipAmount };
+    }
+    else if(serviceRating==4)
+    {
+      return { tipPercentage: 20, tipAmount: (tipPercentage*billAmount)/100, totalAmount: billAmount+tipAmount };
+    }else if(serviceRating==5)
+    {
+      return { tipPercentage: 5, tipAmount: (tipPercentage*billAmount)/100, totalAmount: billAmount+tipAmount };
+    }
+   }*/
 }
